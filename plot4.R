@@ -7,7 +7,7 @@ powerConsumpdata <- read.table(powerCosumpDataFile, header=TRUE, sep=";", string
 powerConsumpSubsetData <- data[powerConsumpdata$Date %in% c("1/2/2007","2/2/2007") ,]
 head(powerConsumpSubsetData)
 
-#for plot4 of the project we need to plot 4 graphs. 
+ 
 pasteDateTime <- paste(powerConsumpSubsetData$Date, powerConsumpSubsetData$Time, sep=" ")
 datetime <- strptime(pasteDateTime, "%d/%m/%Y %H:%M:%S") 
 globalActivePower <- as.numeric(powerConsumpSubsetData$Global_active_power)
